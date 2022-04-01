@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiotee Player - Chase Smith</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light",
+                title: { text: "Chase Smith" },
+                data: [{
+                    type: "line",
+                    indexLabelFontSize: 40,
+                    dataPoints: [
+                        {x: new Date(2021, 06, 26), y: 13.00},
+                        {x: new Date(2021, 07, 10), y: 10.83},
+                        {x: new Date(2021, 07, 17), y: 13.75},
+                        {x: new Date(2021, 08, 14), y: 9.00},
+                        {x: new Date(2021, 10, 02), y: 7.77},
+                        {x: new Date(2022, 03, 05), y: 11.11},
+                        {x: new Date(2022, 03, 19), y: 12.14},
+                        {x: new Date(2022, 03, 26), y: 15.57},
+                    ]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+</head>
+<body>
+    <div id="chartContainer" style="height: 400px; width: 100%"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

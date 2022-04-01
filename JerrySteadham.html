@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiotee Player - Jerry Steadham</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light",
+                title: { text: "Jerry Steadham" },
+                data: [{
+                    type: "line",
+                    indexLabelFontSize: 16,
+                    dataPoints: [
+                        {x: new Date(2021, 04, 10), y: 27.86},
+                        {x: new Date(2021, 04, 24), y: 25.83},
+                        {x: new Date(2021, 05, 08), y: 25.36},
+                        {x: new Date(2021, 06, 26), y: 33.75},
+                        {x: new Date(2021, 07, 17), y: 33.00},
+                        {x: new Date(2022, 03, 19), y: 25.82}
+                    ]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+</head>
+<body>
+    <div id="chartContainer" style="height: 400px; width: 100%"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
